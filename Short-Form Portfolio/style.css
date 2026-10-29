@@ -1,0 +1,226 @@
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (steve.jpeg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(112, 12, 28, 0.82), rgba(112, 12, 28, 0.82)), url("steve.jpeg");
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+.hover:hover .img-responsive {
+  opacity: 0.3;
+}
+
+.hover:hover .img {
+  opacity: 0.3;
+}
+
+.project-image-placeholder {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 3px dashed #f0c75e;
+  background: #3b3b3b;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.project-image-placeholder--modal {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5rem;
+  background: #f5f1e7;
+  color: #2d2d30;
+}
+
+.short-form-portfolio .project-preview {
+  display: flex;
+  aspect-ratio: 4 / 3;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000b1a;
+}
+
+.short-form-portfolio .project-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.short-form-portfolio .portfolio-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.project-grid,
+.course-goal-grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.course-goal-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.course-goal-grid li {
+  grid-column: span 2;
+}
+
+.course-goal-grid li:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.course-goal-grid li:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-card h3 {
+  min-height: 2.2em;
+}
+
+.course-goal-grid {
+  counter-reset: course-goal;
+}
+
+.course-goal-grid li {
+  position: relative;
+  counter-increment: course-goal;
+  padding: 1.5rem;
+  padding-top: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #242424;
+  line-height: 1.5;
+}
+
+.course-goal-grid li::before {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  content: counter(course-goal);
+  color: #700c1c;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.course-goal-grid h3 {
+  margin: 0 0 1rem;
+  color: #3b0710;
+  font-size: 1.2em;
+}
+
+.course-goal-grid p {
+  margin-bottom: 0;
+  color: #242424;
+}
+
+@media (max-width: 600px) {
+  .project-grid,
+  .course-goal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .course-goal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-goal-grid li:nth-child(4),
+  .course-goal-grid li:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+.modal-project-image {
+  width: 100%;
+  max-height: 75vh;
+  margin: 0 auto 1.5rem;
+  object-fit: contain;
+}
+
+
+.bg-b {
+  background: #2d2d30;
+  color: #bdbdbd;
+}
+.bg-w h3 {color: #fff;}
+.bg-w p {color: #fff;}
+
+.bg-w {
+  background: #fff;
+  color: #2d2d30;
+}
+.bg-w h3 {color: #2d2d30;}
+.bg-w p {color: #2d2d30;}
+
+.design-beginnings {
+  background: #700c1c;
+  color: #fff;
+}
+
+.design-beginnings h1,
+.design-beginnings h3,
+.design-beginnings p {
+  color: #fff;
+}
+
+.short-form-portfolio,
+.course-goals,
+body,
+html {
+  background-color: #3b0710;
+}
+
+.short-form-portfolio,
+.course-goals {
+  color: #fff;
+}
+
+.course-goals h2,
+.course-goals li {
+  color: #fff;
+}
